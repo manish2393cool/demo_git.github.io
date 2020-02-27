@@ -1,0 +1,14 @@
+<head><script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.12.0"> </script>
+<script>
+          async function loadModel(){ 
+              model = await tf.loadModel('web_model/model.json') 
+              input_img = 
+              y = model.predict(tf.zeros([1,2])) 
+              document.getElementById('out').innerHTML = y.dataSync()[0] 
+          } 
+          loadModel() 
+</script>
+</head> 
+<body>
+        <img src="/html/images/test.png" alt="Simply Easy Learning" width="200" height="80"> 
+</body>
